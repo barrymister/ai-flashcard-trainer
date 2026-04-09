@@ -1,0 +1,72 @@
+{
+  "name": "ai-flashcard-trainer",
+  "version": "0.1.0",
+  "description": "React components and spaced repetition engine for flashcard-based training — study sessions, AI-powered explanations, deck management.",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./engine": {
+      "types": "./dist/engine.d.ts",
+      "import": "./dist/engine.mjs",
+      "require": "./dist/engine.js"
+    },
+    "./schema": {
+      "types": "./dist/schema.d.ts",
+      "import": "./dist/schema.mjs",
+      "require": "./dist/schema.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "lint": "tsc --noEmit",
+    "prepare": "tsup",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "react",
+    "flashcards",
+    "spaced-repetition",
+    "sm2",
+    "study",
+    "training",
+    "ai",
+    "education",
+    "learning"
+  ],
+  "author": "Barry Mister",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/barrymister/ai-flashcard-trainer.git"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "peerDependenciesMeta": {
+    "drizzle-orm": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "drizzle-orm": "^0.45.2",
+    "react": "^19.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^3.5.0"
+  }
+}
